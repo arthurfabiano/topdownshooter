@@ -1,0 +1,5 @@
+res://prefabs/player/player.tscn
+res://scripts/player.gd
+res://scenes/world.tscn
+res://scripts/bullet.gd
+res://prefabs/player/bullet.tscn

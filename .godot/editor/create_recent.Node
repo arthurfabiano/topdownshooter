@@ -1,0 +1,10 @@
+Marker2D
+VisibleOnScreenEnabler2D
+Sprite2D
+CollisionShape2D
+RigidBody2D
+AnimationTree
+AnimationPlayer
+Node2D
+Node
+CharacterBody2D
