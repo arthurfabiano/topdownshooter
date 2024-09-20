@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://dp4db1lihxg1m"]
+[gd_scene load_steps=101 format=3 uid="uid://dp4db1lihxg1m"]
 
 [ext_resource type="Texture2D" uid="uid://b3n851kcxf2o7" path="res://assets/characters/player/feet/idle/survivor-idle_0.png" id="1_0fjwy"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_d64dr"]
@@ -62,6 +62,21 @@
 [ext_resource type="Texture2D" uid="uid://bt51mb0kcnxw3" path="res://assets/characters/player/handgun/move/survivor-move_handgun_17.png" id="60_eue55"]
 [ext_resource type="Texture2D" uid="uid://nx6bwpr41riq" path="res://assets/characters/player/handgun/move/survivor-move_handgun_18.png" id="61_a1cek"]
 [ext_resource type="Texture2D" uid="uid://c44gxylpbtac4" path="res://assets/characters/player/handgun/move/survivor-move_handgun_19.png" id="62_2b7jn"]
+[ext_resource type="Texture2D" uid="uid://dgkxjfnmwljnj" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_0.png" id="63_vb2ki"]
+[ext_resource type="Texture2D" uid="uid://cw6rixmxfejlw" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_1.png" id="64_rr5hw"]
+[ext_resource type="Texture2D" uid="uid://02h1khjmetc" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_2.png" id="65_op63n"]
+[ext_resource type="Texture2D" uid="uid://cc5bdj5un2th5" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_3.png" id="66_l7f1h"]
+[ext_resource type="Texture2D" uid="uid://csp84c3q8ngiy" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_4.png" id="67_ej84j"]
+[ext_resource type="Texture2D" uid="uid://sf38vsp86qd4" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_5.png" id="68_ujnk6"]
+[ext_resource type="Texture2D" uid="uid://bjhmg6obg2qpb" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_6.png" id="69_iet33"]
+[ext_resource type="Texture2D" uid="uid://xweq83o5hg1h" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_7.png" id="70_tljlc"]
+[ext_resource type="Texture2D" uid="uid://dxgmxv5vtc78s" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_8.png" id="71_yi4f2"]
+[ext_resource type="Texture2D" uid="uid://c1piec6v4rfmy" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_9.png" id="72_02hmk"]
+[ext_resource type="Texture2D" uid="uid://d1n450xfrdr07" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_10.png" id="73_7rtb8"]
+[ext_resource type="Texture2D" uid="uid://b0pufjy1myu34" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_11.png" id="74_red8w"]
+[ext_resource type="Texture2D" uid="uid://bkgoetj8ajiu5" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_12.png" id="75_t7f4f"]
+[ext_resource type="Texture2D" uid="uid://cocxjfvg585bd" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_13.png" id="76_5afk7"]
+[ext_resource type="Texture2D" uid="uid://bauhxpq18c4pr" path="res://assets/characters/player/handgun/reload/survivor-reload_handgun_14.png" id="77_v1pnw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lkt0v"]
 radius = 42.0119
@@ -167,7 +182,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_dsvon"]
 resource_name = "pistol_idle"
 length = 0.6
-loop_mode = 1
 step = 0.03
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -200,58 +214,75 @@ tracks/0/keys = {
 "values": [ExtResource("43_ymqpd"), ExtResource("44_tbsuq"), ExtResource("45_lqyxt"), ExtResource("46_rbo7w"), ExtResource("47_jf6cs"), ExtResource("48_pnglj"), ExtResource("49_1ojb6"), ExtResource("50_8uq5s"), ExtResource("51_sy3f3"), ExtResource("52_mo34q"), ExtResource("53_cu4nm"), ExtResource("54_lmhve"), ExtResource("55_hc0bl"), ExtResource("56_ow613"), ExtResource("57_jepc0"), ExtResource("58_3vk57"), ExtResource("59_u120m"), ExtResource("60_eue55"), ExtResource("61_a1cek"), ExtResource("62_2b7jn")]
 }
 
+[sub_resource type="Animation" id="Animation_tvfhw"]
+resource_name = "pistol_shoot"
+step = 0.03
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33, 0.69),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("40_nujyo"), ExtResource("37_v3ddk"), ExtResource("2_rcqec")]
+}
+
+[sub_resource type="Animation" id="Animation_y5gc1"]
+resource_name = "pistol_reload"
+length = 0.45
+step = 0.03
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03, 0.06, 0.09, 0.12, 0.15, 0.18, 0.21, 0.24, 0.27, 0.3, 0.33, 0.36, 0.39, 0.42),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("63_vb2ki"), ExtResource("64_rr5hw"), ExtResource("65_op63n"), ExtResource("66_l7f1h"), ExtResource("67_ej84j"), ExtResource("68_ujnk6"), ExtResource("69_iet33"), ExtResource("70_tljlc"), ExtResource("71_yi4f2"), ExtResource("72_02hmk"), ExtResource("73_7rtb8"), ExtResource("74_red8w"), ExtResource("75_t7f4f"), ExtResource("76_5afk7"), ExtResource("77_v1pnw")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wrlod"]
 _data = {
 "RESET": SubResource("Animation_hrfcn"),
 "pistol_idle": SubResource("Animation_dsvon"),
+"pistol_reload": SubResource("Animation_y5gc1"),
+"pistol_shoot": SubResource("Animation_tvfhw"),
 "pistol_walk": SubResource("Animation_bd4yd")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qog04"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_05j0f"]
 animation = &"pistol_idle"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xf5lr"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i1pi5"]
 animation = &"pistol_walk"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xh7cb"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2qe32"]
 animation = &"pistol_walk"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3prwp"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eb5b6"]
 animation = &"pistol_walk"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vka7e"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qrg8h"]
 animation = &"pistol_walk"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_40tgf"]
-animation = &"pistol_walk"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q0ryj"]
-animation = &"pistol_walk"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bln88"]
-animation = &"pistol_walk"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_n7fs3"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_qog04")
-blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_xf5lr")
-blend_point_1/pos = 0.0
-blend_point_2/node = SubResource("AnimationNodeAnimation_xh7cb")
-blend_point_2/pos = 0.0
-blend_point_3/node = SubResource("AnimationNodeAnimation_3prwp")
-blend_point_3/pos = 1.0
-blend_point_4/node = SubResource("AnimationNodeAnimation_vka7e")
-blend_point_4/pos = 0.0
-blend_point_5/node = SubResource("AnimationNodeAnimation_40tgf")
-blend_point_5/pos = 0.0
-blend_point_6/node = SubResource("AnimationNodeAnimation_q0ryj")
-blend_point_6/pos = 0.0
-blend_point_7/node = SubResource("AnimationNodeAnimation_bln88")
-blend_point_7/pos = -1.0
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_y53b6"]
-states/pistol/node = SubResource("AnimationNodeBlendSpace1D_n7fs3")
-states/pistol/position = Vector2(370, 58)
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_t6q15"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_05j0f")
+blend_point_0/pos = Vector2(0, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_i1pi5")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_2qe32")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_eb5b6")
+blend_point_3/pos = Vector2(0, -0.9)
+blend_point_4/node = SubResource("AnimationNodeAnimation_qrg8h")
+blend_point_4/pos = Vector2(-1, 0)
+blend_mode = 1
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_d64dr")
@@ -270,6 +301,7 @@ texture = ExtResource("1_0fjwy")
 libraries = {
 "": SubResource("AnimationLibrary_a7cdk")
 }
+autoplay = "idle"
 
 [node name="AnimationTree" type="AnimationTree" parent="Sprite/Legs"]
 tree_root = SubResource("AnimationNodeBlendSpace2D_ne8nh")
@@ -283,11 +315,12 @@ texture = ExtResource("2_rcqec")
 libraries = {
 "": SubResource("AnimationLibrary_wrlod")
 }
+autoplay = "pistol_shoot"
 
 [node name="AnimationTree" type="AnimationTree" parent="Sprite/Body"]
-tree_root = SubResource("AnimationNodeStateMachine_y53b6")
+tree_root = SubResource("AnimationNodeBlendSpace2D_t6q15")
 anim_player = NodePath("../AnimationPlayer")
-parameters/pistol/blend_position = 0
+parameters/blend_position = Vector2(0, 0)
 
 [node name="Barrel" type="Marker2D" parent="."]
 position = Vector2(72, 27)

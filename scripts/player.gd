@@ -49,7 +49,7 @@ func _physics_process(delta):
 
 func animations(mov) -> void:
 	animation_legs.set("parameters/blend_position", mov)
-	animation_body.set("parameters/%s/blend_position" % weapon, mov.angle)
+	animation_body.set("parameters/%s/blend_position" % weapon, mov)
 	pass
 
 func shoot() -> void:
