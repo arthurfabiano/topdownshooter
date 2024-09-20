@@ -1,9 +1,10 @@
-[gd_scene load_steps=178 format=3 uid="uid://dp4db1lihxg1m"]
+[gd_scene load_steps=180 format=3 uid="uid://dp4db1lihxg1m"]
 
 [ext_resource type="Texture2D" uid="uid://b3n851kcxf2o7" path="res://assets/characters/player/feet/idle/survivor-idle_0.png" id="1_0fjwy"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_d64dr"]
 [ext_resource type="Resource" uid="uid://cev13l1q5wif4" path="res://assets/resources/pistol.tres" id="2_cx8pq"]
 [ext_resource type="Texture2D" uid="uid://oi8gvfnwyist" path="res://assets/characters/player/handgun/idle/survivor-idle_handgun_0.png" id="2_rcqec"]
+[ext_resource type="Resource" uid="uid://desmik585qcbx" path="res://assets/resources/rifle.tres" id="2_xs7nv"]
 [ext_resource type="Texture2D" uid="uid://c744418lvhcmn" path="res://assets/characters/player/feet/walk/survivor-walk_0.png" id="3_wtos0"]
 [ext_resource type="Texture2D" uid="uid://dfy17wg1726b5" path="res://assets/characters/player/feet/walk/survivor-walk_1.png" id="4_dgv3i"]
 [ext_resource type="Texture2D" uid="uid://bbcu4b37ysyin" path="res://assets/characters/player/feet/walk/survivor-walk_2.png" id="5_o4ikt"]
@@ -141,6 +142,7 @@
 [ext_resource type="Texture2D" uid="uid://djm8562g2ne5i" path="res://assets/characters/player/rifle/shoot/survivor-shoot_rifle_0.png" id="138_udvxo"]
 [ext_resource type="Texture2D" uid="uid://b876exqtlb775" path="res://assets/characters/player/rifle/shoot/survivor-shoot_rifle_1.png" id="139_xt6c2"]
 [ext_resource type="Texture2D" uid="uid://bg3p4gtn0vwin" path="res://assets/characters/player/rifle/shoot/survivor-shoot_rifle_2.png" id="140_jh5n2"]
+[ext_resource type="Script" path="res://scripts/weapon_controller.gd" id="142_k52ex"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lkt0v"]
 radius = 42.0119
@@ -509,3 +511,8 @@ parameters/rifle/blend_position = Vector2(0, 0)
 
 [node name="Barrel" type="Marker2D" parent="."]
 position = Vector2(72, 27)
+
+[node name="WeaponController" type="Node2D" parent="."]
+script = ExtResource("142_k52ex")
+pistol = ExtResource("2_cx8pq")
+rifle = ExtResource("2_xs7nv")

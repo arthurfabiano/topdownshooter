@@ -7,6 +7,7 @@ class_name Weapon extends Resource
 @export var strong:int = 1
 @export var cooldown:float = 0.0
 @export var shake:int = 35
+
 @export var shoot:AudioStream = null
 @export var reload:AudioStream = null
 @export var empty:AudioStream = null

@@ -6,3 +6,4 @@ res://prefabs/player/bullet.tscn
 res://scripts/resource/weapon.gd
 res://assets/resources/pistol.tres
 res://assets/resources/rifle.tres
+res://scripts/weapon_controller.gd
