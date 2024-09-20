@@ -3,3 +3,6 @@ res://scripts/player.gd
 res://scenes/world.tscn
 res://scripts/bullet.gd
 res://prefabs/player/bullet.tscn
+res://scripts/resource/weapon.gd
+res://assets/resources/pistol.tres
+res://assets/resources/rifle.tres

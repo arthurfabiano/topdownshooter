@@ -5,14 +5,20 @@ extends CharacterBody2D
 @onready var animation_node:AnimationNodeStateMachinePlayback = animation_body.get("parameters/playback")
 @onready var barrel:Marker2D = $Barrel
 
+@export var weapon:Resource = null
+
 const BULLET = preload("res://prefabs/player/bullet.tscn")
 const SPEED = 200.0
 
-var weapon = "pistol"
+
 var weapon_timer = 0.0
 var cooldown = 0.3
 var speed_bullet = 800
 
+func _ready():
+	animation_node.travel(weapon.name)
+	pass
+	
 func _physics_process(delta):
 	look_at(get_global_mouse_position())
 	
@@ -49,7 +55,7 @@ func _physics_process(delta):
 
 func animations(mov) -> void:
 	animation_legs.set("parameters/blend_position", mov)
-	animation_body.set("parameters/%s/blend_position" % weapon, mov)
+	animation_body.set("parameters/%s/blend_position" % weapon.name, mov)
 	pass
 
 func shoot() -> void:

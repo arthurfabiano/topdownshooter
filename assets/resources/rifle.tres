@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://desmik585qcbx"]
+
+[ext_resource type="Script" path="res://scripts/resource/weapon.gd" id="1_uo0er"]
+
+[resource]
+script = ExtResource("1_uo0er")
+name = "rifle"
+ammo = 31
+capacity = 31
+max_ammo = 999
+strong = 1
+cooldown = 0.25
+shake = 50

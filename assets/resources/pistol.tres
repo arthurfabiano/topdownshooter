@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://cev13l1q5wif4"]
+
+[ext_resource type="Script" path="res://scripts/resource/weapon.gd" id="1_n47ri"]
+
+[resource]
+script = ExtResource("1_n47ri")
+name = "pistol"
+ammo = 12
+capacity = 12
+max_ammo = 99
+strong = 1
+cooldown = 0.5
+shake = 35
