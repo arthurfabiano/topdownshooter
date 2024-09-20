@@ -471,7 +471,6 @@ transitions = ["Start", "pistol", SubResource("AnimationNodeStateMachineTransiti
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(1, 0.994976)
 script = ExtResource("1_d64dr")
-weapon = ExtResource("2_cx8pq")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 4)

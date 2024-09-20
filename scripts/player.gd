@@ -5,7 +5,7 @@ extends CharacterBody2D
 @onready var animation_node:AnimationNodeStateMachinePlayback = animation_body.get("parameters/playback")
 @onready var barrel:Marker2D = $Barrel
 
-@export var weapon:Resource setget _set_weapon
+var weapon:Resource : set = _set_weapon
 
 const BULLET = preload("res://prefabs/player/bullet.tscn")
 const SPEED = 200.0
@@ -18,8 +18,13 @@ func _set_weapon(value:Resource) -> void:
 	weapon = value
 	pass
 	
-func _ready():
+func _draw() -> void:
 	animation_node.travel(weapon.name)
+	pass	
+	
+func _ready():
+	print(weapon)
+	#animation_node.travel(weapon.name)
 	pass
 	
 func _physics_process(delta):
